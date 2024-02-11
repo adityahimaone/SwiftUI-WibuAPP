@@ -11,6 +11,11 @@
 		3BFD6DF02B78957B00413A63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD6DEF2B78957B00413A63 /* ContentView.swift */; };
 		3BFD6DF22B78957C00413A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BFD6DF12B78957C00413A63 /* Assets.xcassets */; };
 		3BFD6DF52B78957C00413A63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BFD6DF42B78957C00413A63 /* Preview Assets.xcassets */; };
+		3BFD6E022B7897D000413A63 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD6E012B7897D000413A63 /* Constants.swift */; };
+		3BFD6E042B78981B00413A63 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD6E032B78981B00413A63 /* APIService.swift */; };
+		3BFD6E072B78987600413A63 /* Waifu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD6E062B78987600413A63 /* Waifu.swift */; };
+		3BFD6E092B789D9600413A63 /* WaifuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD6E082B789D9600413A63 /* WaifuVM.swift */; };
+		3BFD6E0D2B789FA300413A63 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD6E0C2B789FA300413A63 /* GridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		3BFD6DEF2B78957B00413A63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3BFD6DF12B78957C00413A63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BFD6DF42B78957C00413A63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3BFD6E012B7897D000413A63 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3BFD6E032B78981B00413A63 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3BFD6E062B78987600413A63 /* Waifu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waifu.swift; sourceTree = "<group>"; };
+		3BFD6E082B789D9600413A63 /* WaifuVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaifuVM.swift; sourceTree = "<group>"; };
+		3BFD6E0C2B789FA300413A63 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +61,11 @@
 		3BFD6DEC2B78957B00413A63 /* Wibu App */ = {
 			isa = PBXGroup;
 			children = (
-				3BFD6DED2B78957B00413A63 /* Wibu_AppApp.swift */,
-				3BFD6DEF2B78957B00413A63 /* ContentView.swift */,
+				3BFD6E052B78986A00413A63 /* Model */,
+				3BFD6DFB2B78976E00413A63 /* Common */,
+				3BFD6DFD2B78978A00413A63 /* ViewModels */,
+				3BFD6DFC2B78978100413A63 /* View */,
+				3BFD6DFE2B78979E00413A63 /* App */,
 				3BFD6DF12B78957C00413A63 /* Assets.xcassets */,
 				3BFD6DF32B78957C00413A63 /* Preview Content */,
 			);
@@ -65,6 +78,64 @@
 				3BFD6DF42B78957C00413A63 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3BFD6DFB2B78976E00413A63 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3BFD6E002B7897BA00413A63 /* Constants */,
+				3BFD6DFF2B7897B000413A63 /* Services */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3BFD6DFC2B78978100413A63 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BFD6DEF2B78957B00413A63 /* ContentView.swift */,
+				3BFD6E0C2B789FA300413A63 /* GridView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BFD6DFD2B78978A00413A63 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3BFD6E082B789D9600413A63 /* WaifuVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3BFD6DFE2B78979E00413A63 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3BFD6DED2B78957B00413A63 /* Wibu_AppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3BFD6DFF2B7897B000413A63 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3BFD6E032B78981B00413A63 /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3BFD6E002B7897BA00413A63 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3BFD6E012B7897D000413A63 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3BFD6E052B78986A00413A63 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3BFD6E062B78987600413A63 /* Waifu.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +208,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BFD6E072B78987600413A63 /* Waifu.swift in Sources */,
+				3BFD6E092B789D9600413A63 /* WaifuVM.swift in Sources */,
 				3BFD6DF02B78957B00413A63 /* ContentView.swift in Sources */,
+				3BFD6E0D2B789FA300413A63 /* GridView.swift in Sources */,
 				3BFD6DEE2B78957B00413A63 /* Wibu_AppApp.swift in Sources */,
+				3BFD6E042B78981B00413A63 /* APIService.swift in Sources */,
+				3BFD6E022B7897D000413A63 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
