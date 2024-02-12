@@ -55,7 +55,7 @@ struct GridView: View {
                         }
                         .sheet(isPresented: $waifuVM.showOptions) {
                             Group {
-                                let defaultText = "You are about to share this items"
+                                let defaultText = "Just watching anime \(waifu.anime)"
                                 
                                 if let imageToShare = waifuVM.imageToShare {
                                     ActivityView(activityItems: [defaultText, imageToShare])
