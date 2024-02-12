@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BFD6DEE2B78957B00413A63 /* Wibu_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD6DED2B78957B00413A63 /* Wibu_AppApp.swift */; };
+		3BAD4C002B79F93900E791B0 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAD4BFF2B79F93800E791B0 /* ActivityView.swift */; };
+		3BFD6DEE2B78957B00413A63 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD6DED2B78957B00413A63 /* MainApp.swift */; };
 		3BFD6DF02B78957B00413A63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD6DEF2B78957B00413A63 /* ContentView.swift */; };
 		3BFD6DF22B78957C00413A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BFD6DF12B78957C00413A63 /* Assets.xcassets */; };
 		3BFD6DF52B78957C00413A63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BFD6DF42B78957C00413A63 /* Preview Assets.xcassets */; };
@@ -19,8 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BAD4BFE2B79F8DC00E791B0 /* Wibu-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Wibu-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3BAD4BFF2B79F93800E791B0 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		3BFD6DEA2B78957B00413A63 /* Wibu App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wibu App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BFD6DED2B78957B00413A63 /* Wibu_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wibu_AppApp.swift; sourceTree = "<group>"; };
+		3BFD6DED2B78957B00413A63 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		3BFD6DEF2B78957B00413A63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3BFD6DF12B78957C00413A63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BFD6DF42B78957C00413A63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		3BFD6DEC2B78957B00413A63 /* Wibu App */ = {
 			isa = PBXGroup;
 			children = (
+				3BAD4BFE2B79F8DC00E791B0 /* Wibu-App-Info.plist */,
 				3BFD6E052B78986A00413A63 /* Model */,
 				3BFD6DFB2B78976E00413A63 /* Common */,
 				3BFD6DFD2B78978A00413A63 /* ViewModels */,
@@ -94,6 +98,7 @@
 			children = (
 				3BFD6DEF2B78957B00413A63 /* ContentView.swift */,
 				3BFD6E0C2B789FA300413A63 /* GridView.swift */,
+				3BAD4BFF2B79F93800E791B0 /* ActivityView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,7 +114,7 @@
 		3BFD6DFE2B78979E00413A63 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				3BFD6DED2B78957B00413A63 /* Wibu_AppApp.swift */,
+				3BFD6DED2B78957B00413A63 /* MainApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -212,7 +217,8 @@
 				3BFD6E092B789D9600413A63 /* WaifuVM.swift in Sources */,
 				3BFD6DF02B78957B00413A63 /* ContentView.swift in Sources */,
 				3BFD6E0D2B789FA300413A63 /* GridView.swift in Sources */,
-				3BFD6DEE2B78957B00413A63 /* Wibu_AppApp.swift in Sources */,
+				3BFD6DEE2B78957B00413A63 /* MainApp.swift in Sources */,
+				3BAD4C002B79F93900E791B0 /* ActivityView.swift in Sources */,
 				3BFD6E042B78981B00413A63 /* APIService.swift in Sources */,
 				3BFD6E022B7897D000413A63 /* Constants.swift in Sources */,
 			);
@@ -351,6 +357,8 @@
 				DEVELOPMENT_TEAM = 2LV65ZKNC2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wibu-App-Info.plist";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This application need to access your photo gallery to save image";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -363,9 +371,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adityahimaone.Wibu-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -380,6 +391,8 @@
 				DEVELOPMENT_TEAM = 2LV65ZKNC2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Wibu-App-Info.plist";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This application need to access your photo gallery to save image";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -392,9 +405,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adityahimaone.Wibu-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

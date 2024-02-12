@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct Wibu_AppApp: App {
+struct MainApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GridView()
         }
     }
 }
