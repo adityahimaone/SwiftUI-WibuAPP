@@ -91,6 +91,9 @@ struct GridView: View {
             .searchable(text: $searchText,
                         placement: .navigationBarDrawer(displayMode: .always),
                         prompt: "e.g Yor Briar")
+            .refreshable {
+                await waifuVM.fetchWaifu()
+            }
         }
         .task {
             await waifuVM.fetchWaifu()
