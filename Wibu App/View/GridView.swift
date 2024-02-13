@@ -64,7 +64,7 @@ struct GridView: View {
                             // Delete
                             Button {
                                 waifuToDelete = waifu
-                                showDeleteConfirmation = true
+                                showDeleteConfirmation.toggle()
                             } label: {
                                 Label("Delete", systemImage: "trash")
                             }
@@ -117,7 +117,17 @@ struct GridView: View {
                         image.resizable()
                             .scaledToFill()
                     case .failure(let error):
-                        Text(error.localizedDescription)
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                                .foregroundStyle(.red)
+                            Image(systemName: "xmark.octagon")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                                .symbolRenderingMode(.hierarchical)
+                                .foregroundStyle(.white)
+                        }
                     @unknown default:
                         fatalError()
                     }
