@@ -12,8 +12,8 @@ class WaifuVM: ObservableObject {
     @Published var waifus: [Waifu] = []
     @Published var imageToShare: UIImage?
     @Published var showOptions: Bool = false
-    @Published var deleteImage: Bool = false
     
+    // Fetch Waifu
     func fetchWaifu() async {
         do {
             let fetchedWaifu = try await APIService.shared.fetchWaifuServices()
@@ -44,9 +44,11 @@ class WaifuVM: ObservableObject {
         showOptions = true
     }
     
-    // Delete image
-    func deletedImage(from urlString: String) {
-        deleteImage = true
+    // Delete Waifu
+    func deletedWaifu(_ waifu: Waifu) {
+        if let index = waifus.firstIndex(where: {$0.id == waifu.id}) {
+            self.waifus.remove(at: index)
+        }
     }
     
 }

@@ -13,23 +13,18 @@ struct GridView: View {
     @State private var showDeleteConfirmation = false
     @State private var waifuToDelete: Waifu?
     
+    // grid grid 3
     private let gridItemLayout = [
         GridItem(.adaptive(minimum: 100))
     ]
     
+    // Seearch filter waifu
     private var filteredWaifus: [Waifu] {
         guard !searchText.isEmpty else {
             return waifuVM.waifus
         }
         return waifuVM.waifus.filter { waifu in
             waifu.name.lowercased().contains(searchText.lowercased())
-        }
-    }
-    
-    private func deleteWaifu(_ waifu: Waifu) {
-        if let index = waifuVM.waifus.firstIndex(where: { $0.id == waifu.id }) {
-            waifuVM.waifus.remove(at: index)
-            showDeleteConfirmation = false
         }
     }
     
@@ -105,7 +100,7 @@ struct GridView: View {
                 buttons: [
                     .destructive(Text("Yes, sure!")) {
                         if let waifuToDelete = waifuToDelete {
-                            deleteWaifu(waifuToDelete)
+                            waifuVM.deletedWaifu(waifuToDelete)
                         }
                     },
                     .cancel()

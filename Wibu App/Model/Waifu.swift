@@ -12,11 +12,4 @@ struct Waifu: Identifiable, Codable {
     var image: String
     var anime: String
     var name: String
-    
-    // Custom initializer to set unique id
-    init(image: String, anime: String, name: String) {
-        self.image = image
-        self.anime = anime
-        self.name = name
-    }
 }

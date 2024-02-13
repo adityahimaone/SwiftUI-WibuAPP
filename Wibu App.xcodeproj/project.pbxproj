@@ -358,7 +358,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Wibu-App-Info.plist";
-				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This application need to access your photo gallery to save image";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Privacy - Photo Library Usage Description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -392,7 +392,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Wibu-App-Info.plist";
-				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This application need to access your photo gallery to save image";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Privacy - Photo Library Usage Description";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
