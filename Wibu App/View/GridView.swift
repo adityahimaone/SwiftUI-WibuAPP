@@ -93,19 +93,15 @@ struct GridView: View {
         .task {
             await waifuVM.fetchWaifu()
         }
-        .actionSheet(isPresented: $showDeleteConfirmation) {
-            ActionSheet(
-                title: Text("Are you sure you want to delete this item?"),
-                message: Text("This action cannot be undone!"),
-                buttons: [
-                    .destructive(Text("Yes, sure!")) {
-                        if let waifuToDelete = waifuToDelete {
-                            waifuVM.deletedWaifu(waifuToDelete)
-                        }
-                    },
-                    .cancel()
-                ]
-            )
+        .confirmationDialog("Are you sure you want to delete this item?", isPresented: $showDeleteConfirmation, titleVisibility: .visible) {
+            Button("Yes, sure!", role: .destructive) {
+                if let waifuToDelete = waifuToDelete {
+                    waifuVM.deletedWaifu(waifuToDelete)
+                }
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This action cannot be undone!")
         }
     }
     
